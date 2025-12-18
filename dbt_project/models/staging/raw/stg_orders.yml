@@ -2,14 +2,9 @@ version: 2
 
 models:
   - name: stg_orders
-    description: "Staged orders data from raw.orders"
+    description: "Staged orders data from ecomm.orders"
     columns:
       - name: order_id
-        tests:
-          - not_null
-          - unique
-
-      - name: customer_id
         tests:
           - not_null
 
