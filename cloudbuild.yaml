@@ -1,0 +1,15 @@
+steps:
+  - name: python:3.11
+    entrypoint: bash
+    dir: dbt_project
+    args:
+      - -c
+      - |
+        pip install --upgrade pip
+        pip install dbt-bigquery
+        dbt debug
+        dbt run
+        dbt test
+
+timeout: "1200s"
+
