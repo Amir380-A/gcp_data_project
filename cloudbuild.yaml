@@ -15,6 +15,29 @@ steps:
         dbt debug
         dbt run
         dbt test
+        dbt docs generate
 
+
+  - name: gcr.io/cloud-builders/gsutil
+    args:
+      - -m
+      - rsync
+      - -r
+      - -d
+      - dbt_project/target
+      - gs://dbt-docs-site
+
+
+
+
+
+
+        
 timeout: "1200s"
+
+
+
+
+
+
 
