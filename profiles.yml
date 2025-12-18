@@ -7,5 +7,6 @@ GCP_project:
       project: data-pipeline-478808
       dataset: analytics
       threads: 4
-      location: US
+      location: US-EAST1
+
 
