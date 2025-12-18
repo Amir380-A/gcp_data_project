@@ -4,6 +4,7 @@ options:
 steps:
   - name: python:3.11
     entrypoint: bash
+    dir: dbt_project
     env:
       - DBT_PROFILES_DIR=/workspace
     args:
