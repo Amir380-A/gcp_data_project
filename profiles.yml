@@ -1,0 +1,11 @@
+GCP_project:
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: oauth
+      project: data-pipeline-478808
+      dataset: analytics
+      threads: 4
+      location: US
+
