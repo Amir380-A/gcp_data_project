@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    database: data-pipeline-478808
+    schema: ecomm
+    tables:
+      - name: users
+      - name: products
+      - name: orders
+      - name: order_items
+      - name: inventory_items
+      - name: distribution_centers
+
