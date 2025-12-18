@@ -4,7 +4,6 @@ options:
 steps:
   - name: python:3.11
     entrypoint: bash
-    dir: GCP_project
     env:
       - DBT_PROFILES_DIR=/workspace
     args:
