@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: ecomm
     database: data-pipeline-478808
     schema: ecomm
     tables:
