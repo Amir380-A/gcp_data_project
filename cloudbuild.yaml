@@ -4,7 +4,9 @@ options:
 steps:
   - name: python:3.11
     entrypoint: bash
-    dir: dbt_project
+    dir: GCP_project
+    env:
+      - DBT_PROFILES_DIR=/workspace
     args:
       - -c
       - |
@@ -15,7 +17,4 @@ steps:
         dbt test
 
 timeout: "1200s"
-
-
-
 
