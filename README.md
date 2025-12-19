@@ -16,7 +16,7 @@ The solution follows modern analytics engineering and MLOps best practices, comb
 ---
 
 ## Architecture Overview
-![alt text](image.png)
+![alt text](assets/image.png)
 
 
 **High-level data and ML flow:**
