@@ -3,6 +3,7 @@ select
     o.order_id,
     o.user_id,
     o.status as order_status,
+    date(o.created_at) as order_date_id, 
     o.created_at as order_created_at,
     oi.product_id,
     p.category as product_category,
