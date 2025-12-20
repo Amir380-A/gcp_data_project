@@ -2,9 +2,10 @@
 
 ## Overview
 
-This repository demonstrates an end-to-end, cloud-native Data Engineering and ML pipeline on Google Cloud Platform (GCP).
+- This repository demonstrates an end-to-end, cloud-native Data Engineering and ML pipeline on Google Cloud Platform (GCP).
+- This project is based upon the public BigQuery dataset, TheLook, wich is a synthetic Ecommerce dataset made by the Looker team.
 
-The project leverages GCP-managed services to build a scalable ELT architecture, automate transformations using dbt, deployment of machine learning models with Vertex AI, and expose analytics through Looker Studio and orchestrated via CI/CD using Cloud Build.
+- The project leverages GCP-managed services to build a scalable ELT architecture, automate transformations using dbt, deployment of machine learning models with Vertex AI, and expose analytics through Looker Studio and orchestrated via CI/CD using Cloud Build.
 
 The solution follows modern analytics engineering and MLOps best practices, combining:
 - Data ingestion and transformation
@@ -111,7 +112,8 @@ This ensures:
 ## Analytics & Reporting
 
 - **Looker Studio** dashboard built on dbt marts
-
+- Looker Report Dashboard Link:
+https://lookerstudio.google.com/u/0/reporting/ce9b8407-3e83-47eb-8787-40112efc6dde/page/KkGjF/edit
 ---
 
 ## Machine Learning Workflow
