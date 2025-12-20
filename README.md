@@ -21,18 +21,18 @@ The solution follows modern analytics engineering and MLOps best practices, comb
 
 **High-level data and ML flow:**
 
-Source Data (GCS Bucket)
-   ↓
-BigQuery (Raw Dataset)
-   ↓
-dbt (Staging → Marts)
-   ↓
-Analytics (Looker Studio)
-   ↓
-ML Training (Vertex AI AutoML)
-   ↓
-Model Endpoint
-   ↓
+Source Data (GCS Bucket)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+BigQuery (Raw Dataset)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+dbt (Staging → Marts)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+Analytics (Looker Studio)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+ML Training (Vertex AI AutoML)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+Model Endpoint<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
 Real-time Inference (Pub/Sub → Cloud Run)
 
 
@@ -87,6 +87,10 @@ Real-time Inference (Pub/Sub → Cloud Run)
 | Raw | Source / ingestion tables |
 | Marts | Fact & dimension tables for analytics |
 
+### Lineage Graph
+![alt text](assets/lineage.PNG)
+
+
 ## CI/CD Pipeline
 
 The Cloud Build pipeline automatically:
@@ -130,7 +134,8 @@ This ensures:
   - Data lineage
   - Model dependencies
   - Column-level documentation
-
+### Docs Live Link
+[dbt docs site](https://storage.googleapis.com/dbt-docs-site/index.html#!/overview)
 ---
 
 ## Prerequisites
