@@ -17,7 +17,7 @@ The solution follows modern analytics engineering and MLOps best practices, comb
 ---
 
 ## Architecture Overview
-![alt text](assets/image.png)
+![alt text](assets/image.PNG)
 
 
 **High-level data and ML flow:**
@@ -126,6 +126,8 @@ https://lookerstudio.google.com/u/0/reporting/ce9b8407-3e83-47eb-8787-40112efc6d
    - Cloud Run services
 5. Capture predictions for downstream analysis and feedback loops to a bigquery feedback table.
 
+![alt text](assets/graph.PNG)
+
 ---
 
 ## dbt Documentation
@@ -139,6 +141,10 @@ https://lookerstudio.google.com/u/0/reporting/ce9b8407-3e83-47eb-8787-40112efc6d
 ### Docs Live Link
 [dbt docs site](https://storage.googleapis.com/dbt-docs-site/index.html#!/overview)
 ---
+## alerting 
+- integrated automated Gmail alerting when dbt tests fail 
+
+![alt text](assets/alert-sample.PNG)
 
 ## Prerequisites
 
