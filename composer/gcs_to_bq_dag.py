@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime
 
 with DAG(
-    dag_id="gcs_to_bigquery_pipeline_v6",
+    dag_id="gcs_to_bigquery_pipeline_v7",
     start_date=datetime(2025, 12, 22),
     schedule="@monthly",
     catchup=False,
