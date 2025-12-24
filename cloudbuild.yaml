@@ -27,11 +27,6 @@ steps:
       - dbt_project/target
       - gs://dbt-docs-site
 
-
-
-
-
-
         
 timeout: "1200s"
 

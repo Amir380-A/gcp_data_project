@@ -4,3 +4,5 @@ steps:
   args: ["rsync", "-r", "-d", "./composer", "gs://$_DAG_BUCKET/dags"]
 options:
   logging: CLOUD_LOGGING_ONLY
+
+
