@@ -17,12 +17,15 @@ The solution follows modern analytics engineering and MLOps best practices, comb
 ---
 
 ## Architecture Overview
-![alt text](assets/diagram.PNG)
+
+![alt text](assets/diagram_final.PNG)
 
 
 **High-level data and ML flow:**
 
 Source Data (GCS Bucket)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+Cloud Composer (Airflow)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
 BigQuery (Raw Dataset)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
@@ -68,8 +71,12 @@ Real-time Inference (Pub/Sub → Cloud Run)
   - Generating dbt documentation
   - Deploying dbt docs to a public GCS static site
 - Fully automated pipeline triggered on GitHub push to main branch.
+### Orchestration and scheduling 
+- **Cloud Composer** for:
+  - Automated and archestrating Monthly ingestion of data from GCS 
 
 
+![alt text](assets/dag.PNG)
 ---
 
 ## Modeling Approach
@@ -114,6 +121,10 @@ This ensures:
 - **Looker Studio** dashboard built on dbt marts
 - Looker Report Dashboard Link:
 https://lookerstudio.google.com/u/0/reporting/ce9b8407-3e83-47eb-8787-40112efc6dde/page/KkGjF/edit
+
+![alt text](assets/looker1.PNG)
+![alt text](assets/looker2.PNG)
+
 ---
 
 ## Machine Learning Workflow
@@ -160,6 +171,15 @@ python -m venv dbt-env
 source dbt-env/bin/activate
 pip install dbt-bigquery
 ```
+## Infrastructure reproducibility
+- Used Terraform for easier  reproducibility and destroying of the infrastructure.
+- Used remote state backend on GCS.
+
+```bash
+terraform init
+terraform plan
+terraform apply
+```
 
 
 ## Tools used 
@@ -171,3 +191,4 @@ pip install dbt-bigquery
 - Cloud Build 
 - Vertex AI AutoML 
 - dbt
+- Terraform
