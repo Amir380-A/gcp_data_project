@@ -155,7 +155,7 @@ https://lookerstudio.google.com/u/0/reporting/ce9b8407-3e83-47eb-8787-40112efc6d
 ## alerting 
 - integrated automated Gmail alerting when dbt tests fail 
 
-![alt text](assets/alert-sample.PNG)
+![alt text](assets/email.PNG)
 
 ## Prerequisites
 
