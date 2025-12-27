@@ -138,6 +138,10 @@ https://lookerstudio.google.com/u/0/reporting/ce9b8407-3e83-47eb-8787-40112efc6d
 5. Capture predictions for downstream analysis and feedback loops to a bigquery feedback table.
 
 ![alt text](assets/graph.PNG)
+![alt text](assets/training.PNG)
+![alt text](assets/reg.PNG)
+![alt text](assets/endpoints.PNG)
+![alt text](assets/endpoint.PNG)
 
 ---
 
@@ -176,6 +180,7 @@ pip install dbt-bigquery
 - Used remote state backend on GCS.
 
 ```bash
+cd infra
 terraform init
 terraform plan
 terraform apply
